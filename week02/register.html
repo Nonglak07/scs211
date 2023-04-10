@@ -1,0 +1,31 @@
+<form action="/action_page.php">
+  <label for="fname">กรอกชื่อ-นามสกุล:</label><br />
+  <input type="text" id="fname" name="fname" value="ชื่อ" />
+  <input type="text" id="lname" name="lname" value="นามสกุล" />
+  <br /><br />
+  <label for="cars">เลือกเพศ:</label>
+  <select name="cars" id="cars">
+    <option value="m">ชาย</option>
+    <option value="f">หญิง</option>
+    <option value="other">ไม่ระบุ</option>
+  </select>
+  <br /><br />
+
+  <label for="myfile">เลือกไฟล์:</label>
+  <input type="file" id="myfile" name="myfile" />
+  <br /><br />
+
+  <label for="email">กรุณากรอก อีเมล์:</label>
+  <input type="email" id="email" name="email" value="email" />
+  <br /><br />
+
+  <label for="birthday">วัน/เดือน/ปีเกิด:</label>
+  <input type="date" id="birthday" name="birthday">
+  <br /><br />
+
+  <label for="quantity">GPAX:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="9" />
+  <br /><br />
+
+  <button type="button" onclick="alert('บันทึกเรียบร้อย!')">บันทึก</button>
+</form>
