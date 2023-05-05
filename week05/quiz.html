@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper row5">
+            <form>
+                <!--เลือกคณะ-->
+                <div class="row mb-3">
+                    <div class="col-lg-6">
+                        <label>คณะ / สาขาที่ต้องการสมัคร<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="branch_Select" id="branch_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">คณะวิทยาศาสตร์และเทคโนโลยี | สาขาวิทยาการคอมพิวเตอร์</option>
+                            <option value="2">คณะวิทยาศาสตร์และเทคโนโลยี | สาขานวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์
+                            </option>
+                            <option value="3">คณะวิทยาการจัดการ | สาขาธุรกิจค้าปลีกสมัยใหม่</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--เลือกสัญชาติ / เพศ-->
+                <div class="row mb-3">
+                    <div class="col-lg-2">
+                        <label>สัญชาติ<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="nationality_Select" id="nationality_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">คนไทย</option>
+                            <option value="2">ต่างชาติ</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <label>เพศ<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="sex_Select" id="sex_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">ชาย</option>
+                            <option value="2">หญิง</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--กรอกข้อมูลส่วนตัว-->
+                <div class="row mb-3">
+                    <div class="col-lg-2">
+                        <label for="pname">คำนำหน้าชื่อ<span class="text-danger"> *(ชื่อเต็ม)</span></label>
+                        <input type="text" name="pname" class="form-control" id="pname" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="fname">ชื่อ<span class="text-danger"> *</span></label>
+                        <input type="text" name="fname" class="form-control" id="fname" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">นามสกุล<span class="text-danger"> *</span></label>
+                        <input type="text" name="lname" class="form-control" id="lname" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="cardid">บัตรประชาชน<span class="text-danger"> *</span></label>
+                        <input type="text" name="cardid" class="form-control" id="cardid" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="telephone">เบอร์โทรศัพท์<span class="text-danger"> *</span></label>
+                        <input type="text" name="telephone" class="form-control" id="telephone" />
+                    </div>
+                </div>
+
+                <!--ช่องทางติดต่อ-->
+                <div class="row mb-3">
+                    <div class="col-lg-3">
+                        <label>ID Line(ถ้ามี)<span class="text-danger"> </span></label>
+                        <input type="text" name="line" class="form-control" id="line" />
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Facebook(ถ้ามี)<span class="text-danger"> *</span></label>
+                        <input type="text" name="facebook" class="form-control" id="facebook" />
+                    </div>
+                    <div class="col-lg-3">
+                        <label>อีเมล<span class="text-danger"> *</span></label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                </div>
+
+                <!--การศึกษา-->
+                <div class="row mb-3">
+                    <div class="col-lg-2">
+                        <label>วุฒิการศึกษา<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="educationan_Select" id="educationan_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">ม.6</option>
+                            <option value="2">ปวช.</option>
+                            <option value="3">ปวส.</option>
+                            <option value="4">อนุปริญญา</option>
+                            <option value="5">ปริญญาตรี</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-5">
+                        <label>ชื่อสถานศึกษาเดิม<span class="text-danger"> *</span></label>
+                        <input type="text" name="place" class="form-control" id="place" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label>จังหวัด<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="province_Select" id="province_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">.ต่างชาติ/foreigner</option>
+                            <option value="2">ปทุมธานี</option>
+                            <option value="2">กรุงเทพมหานคร</option>
+                            <option value="2">พระนครศรีอยุธยา</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-lg-3">
+                        <label>สาขาวิชาที่เรียนจบ<span class="text-danger"> *</span></label>
+                        <input type="text" name="branch" class="form-control" id="branch" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label>ผลการเรียนเฉลี่ย (GPAX)<span class="text-danger"> *</span></label>
+                        <input type="text" name="grade" class="form-control" id="grade" />
+                    </div>
+                    <div class="col-lg-2">
+                        <label>ต้องการกู้ยืมเพื่อการศึกษา<span class="text-danger"> *</span></label>
+                        <select class="form-select" name="bursary_Select" id="bursary_Select">
+                            <option selected>เลือก...</option>
+                            <option value="1">ต้องการ</option>
+                            <option value="0">ไม่ต้องการ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--แนบรูปภาพ-->
+                <div class="row mb-3">
+                    <label>เอกสารแนบ<span class="text-danger"> (ผลการเรียน/แฟ้มสะสมงาน)</span></label>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <input name="image_stu" class="img-thumbnail" type="file" id="image_stu">
+                        </div>
+                    </div>
+                </div>
+
+                <!--ปุ่มข้างล่าง-->
+                <div class="row mb-3">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button type="submit" class="btn btn-success" name="submit" id="submit">ยืนยัน</button>
+                        <button type="cancel" class="btn btn-danger" name="cancel" id="cancel">ยกเลิก</button>
+                    </div>
+                </div>
+        </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
