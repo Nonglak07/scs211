@@ -17,7 +17,7 @@
                 <div class="row mb-3">
                     <div class="col-lg-6">
                         <label>คณะ / สาขาที่ต้องการสมัคร<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="branch_Select" id="branch_Select">
+                        <select class="form-select" name="branch_Select" id="branch_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">คณะวิทยาศาสตร์และเทคโนโลยี | สาขาวิทยาการคอมพิวเตอร์</option>
                             <option value="2">คณะวิทยาศาสตร์และเทคโนโลยี | สาขานวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์
@@ -31,7 +31,7 @@
                 <div class="row mb-3">
                     <div class="col-lg-2">
                         <label>สัญชาติ<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="nationality_Select" id="nationality_Select">
+                        <select class="form-select" name="nationality_Select" id="nationality_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">คนไทย</option>
                             <option value="2">ต่างชาติ</option>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-lg-2">
                         <label>เพศ<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="sex_Select" id="sex_Select">
+                        <select class="form-select" name="sex_Select" id="sex_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">ชาย</option>
                             <option value="2">หญิง</option>
@@ -51,23 +51,23 @@
                 <div class="row mb-3">
                     <div class="col-lg-2">
                         <label for="pname">คำนำหน้าชื่อ<span class="text-danger"> *(ชื่อเต็ม)</span></label>
-                        <input type="text" name="pname" class="form-control" id="pname" />
+                        <input type="text" name="pname" class="form-control" id="pname" required/>
                     </div>
                     <div class="col-lg-2">
                         <label for="fname">ชื่อ<span class="text-danger"> *</span></label>
-                        <input type="text" name="fname" class="form-control" id="fname" />
+                        <input type="text" name="fname" class="form-control" id="fname" required/>
                     </div>
                     <div class="col-lg-2">
                         <label for="lname">นามสกุล<span class="text-danger"> *</span></label>
-                        <input type="text" name="lname" class="form-control" id="lname" />
+                        <input type="text" name="lname" class="form-control" id="lname" required/>
                     </div>
                     <div class="col-lg-2">
                         <label for="cardid">บัตรประชาชน<span class="text-danger"> *</span></label>
-                        <input type="text" name="cardid" class="form-control" id="cardid" />
+                        <input type="text" name="cardid" class="form-control" id="cardid" required/>
                     </div>
                     <div class="col-lg-2">
                         <label for="telephone">เบอร์โทรศัพท์<span class="text-danger"> *</span></label>
-                        <input type="text" name="telephone" class="form-control" id="telephone" />
+                        <input type="text" name="telephone" class="form-control" id="telephone" required/>
                     </div>
                 </div>
 
@@ -75,16 +75,16 @@
                 <div class="row mb-3">
                     <div class="col-lg-3">
                         <label>ID Line(ถ้ามี)<span class="text-danger"> </span></label>
-                        <input type="text" name="line" class="form-control" id="line" />
+                        <input type="text" name="line" class="form-control" id="line" required/>
                     </div>
                     <div class="col-lg-3">
                         <label>Facebook(ถ้ามี)<span class="text-danger"> *</span></label>
-                        <input type="text" name="facebook" class="form-control" id="facebook" />
+                        <input type="text" name="facebook" class="form-control" id="facebook" required/>
                     </div>
                     <div class="col-lg-3">
                         <label>อีเมล<span class="text-danger"> *</span></label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
+                            aria-describedby="emailHelp" required>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                 <div class="row mb-3">
                     <div class="col-lg-2">
                         <label>วุฒิการศึกษา<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="educationan_Select" id="educationan_Select">
+                        <select class="form-select" name="educationan_Select" id="educationan_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">ม.6</option>
                             <option value="2">ปวช.</option>
@@ -103,11 +103,11 @@
                     </div>
                     <div class="col-lg-5">
                         <label>ชื่อสถานศึกษาเดิม<span class="text-danger"> *</span></label>
-                        <input type="text" name="place" class="form-control" id="place" />
+                        <input type="text" name="place" class="form-control" id="place" required/>
                     </div>
                     <div class="col-lg-2">
                         <label>จังหวัด<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="province_Select" id="province_Select">
+                        <select class="form-select" name="province_Select" id="province_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">.ต่างชาติ/foreigner</option>
                             <option value="2">ปทุมธานี</option>
@@ -120,15 +120,15 @@
                 <div class="row mb-3">
                     <div class="col-lg-3">
                         <label>สาขาวิชาที่เรียนจบ<span class="text-danger"> *</span></label>
-                        <input type="text" name="branch" class="form-control" id="branch" />
+                        <input type="text" name="branch" class="form-control" id="branch" required/>
                     </div>
                     <div class="col-lg-2">
                         <label>ผลการเรียนเฉลี่ย (GPAX)<span class="text-danger"> *</span></label>
-                        <input type="text" name="grade" class="form-control" id="grade" />
+                        <input type="text" name="grade" class="form-control" id="grade" required/>
                     </div>
                     <div class="col-lg-2">
                         <label>ต้องการกู้ยืมเพื่อการศึกษา<span class="text-danger"> *</span></label>
-                        <select class="form-select" name="bursary_Select" id="bursary_Select">
+                        <select class="form-select" name="bursary_Select" id="bursary_Select" required>
                             <option selected>เลือก...</option>
                             <option value="1">ต้องการ</option>
                             <option value="0">ไม่ต้องการ</option>
@@ -141,7 +141,7 @@
                     <label>เอกสารแนบ<span class="text-danger"> (ผลการเรียน/แฟ้มสะสมงาน)</span></label>
                     <div class="row mb-3">
                         <div class="col-lg-4">
-                            <input name="image_stu" class="img-thumbnail" type="file" id="image_stu">
+                            <input name="image_stu" class="img-thumbnail" type="file" id="image_stu" required>
                         </div>
                     </div>
                 </div>
