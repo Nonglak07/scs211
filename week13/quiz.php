@@ -4,5 +4,5 @@ $people = $people_obj["people"];
 ?>
 
 <?php foreach($people as $row){ ?>
-    <div><?=$row["name"]?> | <?=$row["education"]?></div>
+    <div><?=$row["name"]?> | <?=$row["education"]?> <?= $row["image"] ?></div> 
 <?php } ?>

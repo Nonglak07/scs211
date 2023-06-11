@@ -1,3 +1,8 @@
+<?php
+$people_obj = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/SCS211/main/week13/staff.json"),true);
+$people = $people_obj["people"];
+?>
+
 <html>
 
 <head>
@@ -24,10 +29,11 @@
             margin-top: 10px;
             line-height: 24px;
         }
+
         /* Sizebox */
         .profile-box {
             width: 240px;
-            height: 290px;
+            height: 240px;
             background: #fff;
             border-radius: 4px;
             margin-bottom: 30px;
@@ -58,7 +64,7 @@
 
         .social-box {
             background: #2196f3;
-            margin: 80px auto 25px;
+            margin: 60px auto 25px;
             text-align: center;
             border-radius: 3px;
         }
@@ -69,37 +75,46 @@
             color: #fff;
             cursor: pointer;
         }
-        .profile-box p{
+
+        .profile-box p {
             text-align: center;
             line-height: 24px;
             color: #555;
         }
-        .team-row{
+
+        .team-row {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             width: 85%;
             margin: auto;
         }
-        .profile-box img:hover{
+
+        .profile-box img:hover {
             width: 240px;
         }
-        .profile-box:hover{
+
+        .profile-box:hover {
             background: #2196f3;
         }
-        .profile-box:hover h4{
+
+        .profile-box:hover h4 {
             color: #fff;
         }
-        .profile-box:hover p{
+
+        .profile-box:hover p {
             color: #efefef;
         }
-        .profile-box:hover small{
+
+        .profile-box:hover small {
             color: #efefef;
         }
-        .profile-box:hover .social-box{
+
+        .profile-box:hover .social-box {
             background: #fff;
         }
-        .profile-box:hover .social-box .fa{
+
+        .profile-box:hover .social-box .fa {
             color: #2196f3;
         }
     </style>
@@ -114,22 +129,24 @@
     <!-- card team-->
     <div class="team-row">
         <!-- card 1 -->
+        <?php foreach($people as $row){ ?>
         <div class="profile-box">
-            <h4>William G.</h4>
-            <small>Founder</small>
-            <img src="images\image4.jpg">
+            <h4><?=$row["name"]?></h4>
+            <small><?=$row["role"]?></small>
+            <img src="<?= $row["image"] ?>">
             <div class="social-box">
                 <i class="fa fa-facebook"></i>
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-linkedin"></i>
                 <i class="fa fa-phone"></i>
             </div>
-            <p>Forget all the reasons why it won’t work
-                and believe the one reason why it will.
+            <p><?=$row["education"]?>
             </p>
         </div>
+        <?php } ?>
+        
         <!-- card 2 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Robert P.</h4>
             <small>Programmer</small>
             <img src="images\image2.jpg">
@@ -142,9 +159,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 3 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Donald R.</h4>
             <small>Founder</small>
             <img src="images\images.jpg">
@@ -157,9 +174,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 4 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Philip L.</h4>
             <small>Marketing</small>
             <img src="images\image3.jpg">
@@ -172,9 +189,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 5 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Michael D. </h4>
             <small>Founder</small>
             <img src="images\image5.jpg">
@@ -187,9 +204,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 6 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Peter H.</h4>
             <small>Founder</small>
             <img src="images\image6.jpg">
@@ -202,9 +219,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 7 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>Gary F.</h4>
             <small>Production</small>
             <img src="images\image7.jpg">
@@ -217,9 +234,9 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
         <!-- card 8 -->
-        <div class="profile-box">
+        <!-- <div class="profile-box">
             <h4>David A.</h4>
             <small>Production</small>
             <img src="images\image8.jpg">
@@ -232,7 +249,7 @@
             <p>Forget all the reasons why it won’t work
                 and believe the one reason why it will.
             </p>
-        </div>
+        </div> -->
 
     </div>
 
